@@ -1,0 +1,24 @@
+
+
+<div id="recipe-module">
+  <body style="background-image:url(<%= @recipe.image.image_url %>)">
+    <p id="notice"><%= notice %></p>
+    <h1><%= @recipe.description %></h1>
+
+    <div id="ingredients">
+    <h3>Ingredients: </h3>
+      <%= @recipe.ingredient.name %>
+    </div>
+
+    <div id="directions">
+    <h3>Directions: </h3>
+      <%= @recipe.instruction.step %>
+    </div>
+    <div class="text-center">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-warning"><%= link_to 'Edit', edit_recipe_path(@recipe) %></button>
+        <button type="button" class="btn btn-primary"><%= link_to 'Back', Category.find(@recipe.category_id) %></button>
+      </div>
+  </div>
+
+</div>

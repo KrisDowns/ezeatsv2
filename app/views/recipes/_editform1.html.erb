@@ -1,0 +1,24 @@
+<%= form_for(ingredient, url: update_ingredient_path) do |f| %>
+  <% if ingredient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ingredient.errors.count, "error") %> prohibited this ingredient from being saved:</h2>
+
+      <ul>
+      <% ingredient.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label "Ingredients:", :id => "form-label" %>
+    <%= f.text_area :name, :id => "edit-area" %>
+  </div>
+
+
+
+
+    <%=f.submit :class => "btn btn-primary", :id => "form-sub" %>
+
+<% end %>

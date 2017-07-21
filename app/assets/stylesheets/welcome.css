@@ -1,0 +1,27 @@
+body{
+  background-image: url("https://media.giphy.com/media/Mn2bDsPD8oo48/giphy.gif");
+  background-position: top;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+
+#welcome-module{
+  width: 75vw;
+  border-radius: 5px;
+  margin-top: 20vh;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: auto;
+  text-align: center;
+  padding: 25px;
+  min-width: 300px;
+  text-indent: 2em;
+}
+#greeting{
+  font-size: 10vh;
+  line-height: 10vh;
+  font-family: 'Courgette', cursive;
+  font-weight: bold;
+  color: white;
+}

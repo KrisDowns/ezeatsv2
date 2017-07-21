@@ -1,0 +1,28 @@
+<%= form_for(recipe) do |f| %>
+  <% if recipe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+
+      <ul>
+      <% recipe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :description, "Name:", :id => "form-label" %>
+    <%= f.text_area :description, :id => "edit-area" %>
+    <%= f.label :category_id, "Category:", :id => "form-label" %>
+    <%= f.select :category_id, options_for_select(Category.all.map{|s|[s.description, s.id]}), {}, :class => "btn btn-default dropdown-toggle form-control", data: { toggle: "dropdown" } %>
+  </div>
+
+
+  <div>
+  </div>
+
+
+    <%=f.submit :class => "btn btn-primary", :id => "form-sub" %>
+
+<% end %>

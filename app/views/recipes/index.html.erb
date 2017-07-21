@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+
+<ul class="all-recipes">
+  <% @recipes.each do |recipe| %>
+    <li class="each-recipe">
+      <div class="list-content">
+        <%= link_to image_tag(recipe.image.image_url) %>
+        <p class="desc"><%= recipe.description %></p>
+          <div class="btn-group btn-group-justified" role="group" aria-label="...">
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-primary"><%= link_to 'See full recipe', recipe %></button>
+            </div><!--button-->
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-warning"><%= link_to 'Edit', edit_recipe_path(recipe) %></button>
+            </div><!--button-->
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-danger"><%= link_to 'Delete', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+            </div><!--button-->
+          </div><!--btn-group btn-group-justified-->
+      </div><!--list-content-->
+    </li><!--each-recipe-->
+<% end %>

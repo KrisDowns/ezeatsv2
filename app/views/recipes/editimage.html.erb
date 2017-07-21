@@ -1,0 +1,20 @@
+<div id="recipe-module">
+
+
+<div class="newrecipe" id="background">
+<span id="the-table-recipe2" style=color:white;>
+  <h1>Editing Image</h1>
+  <%= render 'editform3', image: @image, recipe: @recipe %>
+  <div class="btn-group" id="main-edit-btns" role="group">
+    <button type="button" class="btn btn-default"><%= link_to 'Show', @recipe, :id => "pri-btn" %></button>
+    <button type="button" class="btn btn-primary"><%= link_to 'Back', update_instruction_path %></button>
+  </div>
+</span>
+</div>
+
+
+
+
+
+
+</div><!--recipe-module-->
